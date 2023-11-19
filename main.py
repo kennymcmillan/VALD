@@ -34,7 +34,20 @@ def transform_data(df):
     return df
 
 def main():
-    st.title('Aspire Academy - Transform VALD data')
+    st.title('Transform VALD data')
+
+    # Sidebar
+    # Display an image in the sidebar
+    #image = Image.open('path_to_your_image.jpg')  # Replace with your image path
+   # st.sidebar.image(image, caption='Your Image Caption')
+
+    # Add instructions or any other text in the sidebar
+    st.sidebar.write("Here are the instructions for using this tool:")
+
+    # You can add more instructions here
+    st.sidebar.write("1. Upload your CSV file.")
+    st.sidebar.write("2. Click the 'Transform Data' button.")
+    st.sidebar.write("3. Download the transformed data.")
 
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
     if uploaded_file is not None:
@@ -59,5 +72,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
 
 
